@@ -4,288 +4,118 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Gksec</title>
-    <style type="text/css">
-    #screen-fill {
-        font-family: 'untitled-font-2';
-        text-align: center;
-        font-size: 40px;
-        vertical-align: top;
-        padding-top: 60px;
-    }
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
 
-    #screen-fill .arrow {
-        display: none;
-    }
-
-    @media screen and (min-height: 800px) {
-        #screen-fill .arrow {
-            display: block;
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            margin-left: -20px;
-        }
-
-        .window {
-            width: 100%;
-            margin-left: 0px;
-            margin-top: 20px;
-        }
-    }
-
-    .window {
-        border: 1px solid rgb(236, 236, 236);
-        width: 400px;
-        border-radius: 5px;
-        -webkit-box-shadow: 0px 0px 17px rgba(181, 181, 181, 0.87);
-        -moz-box-shadow: 0px 0px 17px rgba(181, 181, 181, 0.87);
-        box-shadow: 0px 0px 17px rgba(181, 181, 181, 0.87);
-        text-align: left;
-        vertical-align: top;
-        margin: 0 20px;
-        animation: zoom 500ms;
-        -webkit-animation: zoom 500ms;
-    }
-
-    .window {
-        height: 340px;
-        display: inline-block;
-    }
-
-    .window .header {
-        padding: 0 9px;
-        line-height: 30px;
-        vertical-align: top;
-        padding: 2px 9px 0;
-    }
-
-    .window .header .title {
-        font: 11px "Myriad Pro", "Arial";
-    }
-
-    .editor .title {
-        text-align: center;
-        display: inline-block;
-        width: 280px;
-        color: #766F79;
-        vertical-align: middle;
-    }
-
-    .editor .body {
-        padding: 18px 10px;
-    }
-
-    .editor .code {
-        font: 11px Monaco, Courier New;
-        color: #ccc;
-    }
-
-    .editor .code .code {
-        color: #777;
-    }
-
-    .editor .code li {
-        padding: 3px 0;
-    }
-
-    .editor .code .fn {
-        color: #4A90E2;
-    }
-
-    .editor .code .v {
-        color: #7ED321;
-    }
-
-    .editor .code .io {
-        color: #000;
-    }
-
-    .window .bullet {
-        height: 11px;
-        width: 11px;
-        display: inline-block;
-        background: #ccc;
-        border-radius: 100%;
-        vertical-align: middle;
-        margin-right: 5px;
-    }
-
-    .window .bullet-red {
-        background: #DF7065;
-    }
-
-    .window .bullet-yellow {
-        background: #E6BB46;
-    }
-
-    .window .bullet-green {
-        background: #5BCC8B;
-    }
-
-    .browser .header {
-        background: #E8E8E8;
-        border-radius: 4px 4px 0 0;
-        padding-bottom: 3px;
-    }
-
-    .browser .header .title {
-        background: #fff;
-        display: inline-block;
-        width: 320px;
-        border-radius: 4px;
-        padding: 6px 14px 4px;
-        margin-left: 10px;
-        vertical-align: middle;
-    }
-
-    .browser .header .title .scheme {
-        color: #7ED321;
-    }
-
-    .browser .body {
-        padding: 16px;
-        font: 11px "Lucida Grande", "Open Sans";
-    }
-
-    .browser .tweets {
-        margin: 0;
-        height: 150px;
-        overflow-y: auto;
-    }
-
-    .browser .tweets li {
-        height: 27px;
-        line-height: 27px;
-        width: 368px;
-        vertical-align: middle;
-        color: #4B434D;
-        list-style-type: none;
-        margin-bottom: 14px;
-    }
-
-    .browser .tweets img {
-        width: 27px;
-        height: 27px;
-        border-radius: 100%;
-        float: left;
-        margin-right: 10px;
-    }
-
-    .browser .tweets .tweet {
-        max-width: 300px;
-        overflow: hidden;
-        display: inline-block;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-
-    .browser .tweets .time {
-        color: #9B9B9B;
-        float: right;
-    }
-
-    .browser .tweets .new {
-        animation: drop 500ms;
-        -webkit-animation: drop 500ms;
-    }
-
-    .browser .header .title {
-        background: #fff;
-        display: inline-block;
-        width: 295px;
-        border-radius: 4px;
-        padding: 6px 14px 4px;
-        margin-left: 10px;
-        vertical-align: middle;
-    }
-
-    .titles {
-        text-align: center;
-        font-size: 45px;
-        font-weight: bold;
-        letter-spacing: 1px;
-        color: #333;
-        margin-top: 20px;
-        font-family: cursive;
-    }
-
-    .js {
-        text-align: center;
-        background: #bf2b2b;
-        color: #fff;
-        width: 135px;
-        margin: auto;
-        border-radius: 6px;
-        font-size: 14px;
-    }
-
-    .hrs {
-        border-bottom: 1px solid #f3f3f3;
-        margin-top: 25px;
-        margin-bottom: -25px;
-        width: 848px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .footers {
-        text-align: center;
-        font-size: 12px;
-        margin-top: 50px;
-        color: #5a5a5a;
-        letter-spacing: 1px;
-    }
-    </style>
+    <title>怪咖 | 一个热爱WEB安全的咸鱼</title>
+    <meta name="description"
+       
+    <meta name="keywords" content="怪咖,GKSEC,ddos-sec.com">
+    <link rel="stylesheet" type="text/css" href="./css/FiraCode.css">
+    <link rel="stylesheet" type="text/css" href="./css/nutssss.css">
+    <link rel="icon" href="./favicon.ico">
 </head>
 
 <body>
-    <div>
-        <div class="titles">
-            <span>HackerTools</span>
+    <div id="box">
+        <!-- 个人资料卡片 -->
+        <div class="meBox">
+            <!-- 头像 -->
+            <div class="headPhoto"></div>
+            <!-- 介绍 -->
+            <div class="meBox-title">
+                <p>I'm 怪咖GKSEC</p>
+                <div class="fg"></div>
+            </div>
+            <div class="meBox-text">
+                <p>一条咸鱼<img src="./img/fish.png" alt="咸鱼" style="width: 20px; vertical-align: middle;"></p>
+                <p>爱好计算机，WEB安全</p>
+				<p>最爱我的宝贝娇娇</p>
+                <p>干啥啥不行折腾第一名</p>
+                <p>GKSEC<img src="./img/002.png" alt="冰激凌" style="width: 15px; vertical-align: middle;"></p>
+            </div>
+            <!-- 两个按钮 -->
+            <div class="meBox-Button">
+                <a href="https://www.ddos-sec.com">关于</a>
+                <a href="https://www.ddos-sec.com">联系</a>
+            </div>
         </div>
-        <div class="js">
-            <span>收集各种安全工具</span>
+
+        <!-- 伪终端介绍 -->
+        <div id="cmdBox">
+            <!-- 第一个终端 -->
+            <div class="cmd">
+                <!-- 三个按钮 -->
+                <div class="click">
+                    <div class="red"></div>
+                    <div class="yellow"></div>
+                    <div class="green"></div>
+                </div>
+                <!-- 顶部标题 -->
+                <div class="title">
+                    <span>GKSEC - bash</span>
+                </div>
+                <!-- 终端内文字 -->
+                <div class="cmdText">
+                    <span style="color: rgb(0, 190, 0);">root@GKSEC</span>
+                    <span style="color: blue;">~</span>
+                    <span style="color: rgb(39, 39, 39);">./tianqi.sh</span>
+                    <br />
+                    <iframe scrolling="no" src="https://tianqiapi.com/api.php?style=tc&skin=pitaya" frameborder="0"
+                        width="350" height="24" allowtransparency="true"></iframe>
+                    <br />
+                    <span style="color: rgb(0, 190, 0);">root@GKSEC</span>
+                    <span style="color: blue;">~</span>
+                    <span style="color: rgb(39, 39, 39);">cat /me.txt</span>
+                    <p>爱好计算机，会去自学自己感兴趣的一切东西</p>
+                    <p>略懂H5，C#开发；爱好折腾去解决一切问题</p>
+                    <p>同时我也很喜欢玩硬件，ESP8266是我的最爱</p>
+                    <p>这条路我才刚刚迈开了我的第一步</p>
+                    <p>路上的坎一定会非常多，但</p>
+                    <p>在我眼里</p>
+                    <p>没有什么问题是尝试不能解决的，如果有那就多尝试几次甚至上百次</p>
+                    <p>即使前方的路看似绝境，也要有硬生生给自己开出一条路的勇气</p>
+                    <span style="color: rgb(0, 190, 0);">root@GKSEC</span>
+                    <span style="color: blue;">~</span>
+                    <span style="color: rgb(39, 39, 39);">sudo rm -rf /过去的自己/*</span>
+                </div>
+            </div>
+            <!-- 第二个终端 -->
+            <div class="cmd cmd2">
+                <!-- 三个按钮 -->
+                <div class="click">
+                    <div class="red"></div>
+                    <div class="yellow"></div>
+                    <div class="green"></div>
+                </div>
+                <!-- 顶部标题 -->
+                <div class="title">
+                    <span>GKSEC - bash</span>
+                </div>
+                <!-- 终端内文字 -->
+                <div class="cmdText">
+                    <span style="color: rgb(0, 190, 0);">root@GKSEC</span>
+                    <span style="color: blue;">~</span>
+                    <span style="color: rgb(39, 39, 39);">./links.sh</span>
+                    <p>我的其他站点：</p>
+                    <ul class="ul">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Love</a></li>
+                        <li><a href="#">Note</a></li>
+                        <li><a href="h#">Mc</a></li>
+                        <li><a href="#">McBlog</a></li>
+                    </ul>
+                    <span style="color: rgb(0, 190, 0);">root@GKSEC</span>
+                    <span style="color: blue;">~</span>
+                </div>
+            </div>
         </div>
-        <div class="hrs"></div>
     </div>
-    <div id="screen-fill">
-        <div class="window editor fading">
-            <div class="header">
-                <span class="bullet bullet-red"></span><span class="bullet bullet-yellow"></span><span class="bullet bullet-green"></span><span class="title">~/Projects/jquery/ajax.js</span>
-            </div>
-            <div class="body">
-                <ol class="code">
-                    <li><span class="code">$.ajax({</span></li>
-                    <li><span class="code">    type: "GET",</span></li>
-                    <li><span class="code">    url: "/ajax_test",</span></li>
-                    <li><span class="code">    dataType: "json",</span></li>
-                    <li><span class="code">    success: function(data) {</span></li>
-                    <li><span class="code">        console.log(data);</span></li>
-                    <li><span class="code">        $('#div').html(data);</span></li>
-                    <li><span class="code">    },</span></li>
-                    <li><span class="code">    error: function(e) {</span></li>
-                    <li><span class="code">        console.log('error');</span></li>
-                    <li><span class="code">    }</span></li>
-                    <li><span class="code">});</span></li>
-                </ol>
-            </div>
-        </div>
-        <div class="window browser fading">
-            <div class="header">
-                <span class="bullet bullet-red"></span><span class="bullet bullet-yellow"></span><span class="bullet bullet-green"></span><span class="title"><span class="scheme">https://</span>www.ddos-sec.com</span>
-            </div>
-            <div class="body" style="letter-spacing: 0.5px">
-                <p><b>Hello Hacker !</b></p>
-                <p>This is ajax test !</p>
-                <p>A boy who likes Web Security！</p>
-                <p>人生若只如初见，何事秋风悲画扇</p>
-                <p>急电QQ1565447149 邮件:admin@ddos-sec.com</p>
-            </div>
-        </div>
-    </div>
-    <div class="footers">
-        <span>Copyright © 2019 怪咖 www.ddos-sec.com </span>
+
+    <!-- 页脚 -->
+    <div id="footer">
+        <p>© 2020 GKSEC | <a href="http://beian.miit.gov.cn">鄂ICP备17008872号</a></p>
+        <p>THEME MADE BY <a href="https://www.ddos-sec.com">GKSEC</a></p>
     </div>
 </body>
 
